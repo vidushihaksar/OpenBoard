@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
     <style>
         * {
@@ -30,29 +31,44 @@
         <div class="tool-panel">
             <div class="tool">
                 <img src="./NewIcons/Black_Pencil.svg" alt="" class="tool-img" id="pencil" onclick="handleTool('pencil')">
-                <div class="tool-options"></div>
-                <div class="tool-options">
+                <div class="tool-options" id="pencil-options">
                     <div class="slider">
-                        <input type="range" name="" id="">
+                        <input type="range" max='50' min='4' value='5' step='1'>
                     </div>
                     <div class="colors">
-                        <div class="color red"></div>
-                        <div class="color green"></div>
-                        <div class="color blue"></div>
+                        <div class="color red" onclick="changeColor('red')"></div>
+                        <div class="color green" onclick="changeColor('green')"></div>
+                        <div class="color blue" onclick="changeColor('rgb(91, 137, 223)')"></div>
+                        <div class="color pink" onclick="changeColor('rgb(224, 100, 141)')"></div>
+                        <div class="color coral" onclick="changeColor('coral')"></div>
                     </div>
-
                 </div>
             </div>
             <div class="tool">
-                <img src="./NewIcons/Eraser.svg" alt="" class="tool-img" id="eraser" onclick="handleTool('eraser')">;
-                <div class="tool-options"></div>
-                <div class="tool-options">
-                    <div class="slider"></div>
+                <img src="./NewIcons/Eraser.svg" alt="" class="tool-img" id="eraser" onclick="handleTool('eraser')">
+                <div class="tool-options" id="eraser-options">
+                    <div class="slider">
+                        <input type="range" name="" max='50' min='4' value='5' step='1'>
+                    </div>
                 </div>
+            </div>
+            <div class="tool">
+                <img src="./NewIcons/StickyNote.svg" alt="" class="tool-img" id="sticky" onclick="handleTool('sticky')">
+
             </div>
         </div>
     </div>
+    </div>
     <canvas class="board"></canvas>
+
+    <div class="stickyPad">
+        <div class="nav-bar">
+            <div class="close"></div>
+            <div class="minimize"></div>
+        </div>
+        <div class="textarea"></div>
+    </div>
+
     <script>
         let board = document.querySelector(".board");
         board.height = window.innerHeight;
@@ -66,7 +82,10 @@
         })
     </script>
     <script src="tools.js"></script>
-    <script src="canavs.js"></script>
+    <script src="sticky.js"></script>
+    <script src="canvas.js"></script>
+
+
 </body>
 
 </html>
