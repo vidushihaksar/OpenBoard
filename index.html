@@ -29,14 +29,14 @@
     <script src="index.js"></script> -->
     <!-- Drawing board -->
     <div class="tool-bar">
-        <div class="hamburger is-active">
+        <div class="hamburger is-active" id="hamburger-1">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
         </div>
         <div class="tool-panel add-animation">
             <div class="tool active">
-                <img src="./NewIcons/Black_Pencil.svg" alt="" class="tool-img" id="pencil" onclick="handleTool('pencil')">
+                <img src="./NewIcons/draw.svg" alt="" class="tool-img" id="pencil" onclick="handleTool('pencil')">
                 <div class="tool-options pencil" id="pencil-options">
                     <div class="slider">
                         <input type="range" id="pen-size" min="5" max="15" step="1" onchange="sizeChange(this.value)">
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="tool eraser">
-                <img src="./NewIcons/Eraser.svg" alt="" class="tool-img" id="eraser" onclick="handleTool('eraser')">
+                <img src="./NewIcons/clear.svg" alt="" class="tool-img" id="eraser" onclick="handleTool('eraser')">
                 <div class="tool-options eraser" id="eraser-options">
                     <div class="eraser-size">
                         <input type="range" id="eraser-size" min="5" max=30 onchange="sizeChange(this.value)">
@@ -60,7 +60,13 @@
                 </div>
             </div>
             <div class="tool">
-                <img src="./NewIcons/StickyNote.svg" alt="" class="tool-img" id="sticky" onclick="handleTool('sticky')">
+                <img src="./NewIcons/write.svg" alt="" class="tool-img" id="sticky" onclick="handleTool('sticky')">
+
+            </div>
+
+            <div class="tool">
+                <img src="./NewIcons/upload.svg" alt="" class="tool-img" id="upload" onclick="handleTool('upload')">
+                <input type="file" name="" id="acceptImg" style="display: none;">
 
             </div>
         </div>
@@ -91,6 +97,7 @@
     <script src="tools.js"></script>
     <script src="sticky.js"></script>
     <script src="canvas.js"></script>
+    <script src="img.js"></script>
 
 
 </body>
