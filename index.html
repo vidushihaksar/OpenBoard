@@ -18,6 +18,8 @@
         }
     </style>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hamburger.css">
+    <link rel="stylesheet" href="queries.css">
 </head>
 
 <body>
@@ -27,15 +29,20 @@
     <script src="index.js"></script> -->
     <!-- Drawing board -->
     <div class="tool-bar">
-        <div class="hamburger"></div>
-        <div class="tool-panel">
-            <div class="tool">
+        <div class="hamburger is-active">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div class="tool-panel add-animation">
+            <div class="tool active">
                 <img src="./NewIcons/Black_Pencil.svg" alt="" class="tool-img" id="pencil" onclick="handleTool('pencil')">
-                <div class="tool-options" id="pencil-options">
+                <div class="tool-options pencil" id="pencil-options">
                     <div class="slider">
-                        <input type="range" max='50' min='4' value='5' step='1'>
+                        <input type="range" id="pen-size" min="5" max="15" step="1" onchange="sizeChange(this.value)">
+
                     </div>
-                    <div class="colors">
+                    <div class="pencil-colors">
                         <div class="color red" onclick="changeColor('red')"></div>
                         <div class="color green" onclick="changeColor('green')"></div>
                         <div class="color blue" onclick="changeColor('rgb(91, 137, 223)')"></div>
@@ -44,11 +51,11 @@
                     </div>
                 </div>
             </div>
-            <div class="tool">
+            <div class="tool eraser">
                 <img src="./NewIcons/Eraser.svg" alt="" class="tool-img" id="eraser" onclick="handleTool('eraser')">
-                <div class="tool-options" id="eraser-options">
-                    <div class="slider">
-                        <input type="range" name="" max='50' min='4' value='5' step='1'>
+                <div class="tool-options eraser" id="eraser-options">
+                    <div class="eraser-size">
+                        <input type="range" id="eraser-size" min="5" max=30 onchange="sizeChange(this.value)">
                     </div>
                 </div>
             </div>
