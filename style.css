@@ -41,7 +41,7 @@
     display: none;
     position: absolute;
     top: 7.9rem;
-    left: 22rem;
+    left: 20rem;
     border-radius: 0.5rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
@@ -50,7 +50,7 @@
     left: -3rem;
     height: 3rem;
     top: 7.75rem;
-    left: 37rem;
+    left: 32rem;
     text-align: center;
     padding-top: 1rem;
 }
@@ -166,14 +166,19 @@ input[type=range]::-webkit-slider-thumb {
     background: rgb(5, 138, 5);
 }
 
-.textbox {
+.textbox{
     height: 80%;
+    width:100%;
 }
-
-.textbox textarea {
+.textbox textarea{
     height: 100%;
     width: 100%;
 }
+.upload-img{
+    height:100%;
+    width:100%
+}
+
 
 .add-animation {
     animation-name: stretch;

@@ -39,7 +39,7 @@
                 <img src="./NewIcons/draw.svg" alt="" class="tool-img" id="pencil" onclick="handleTool('pencil')">
                 <div class="tool-options pencil" id="pencil-options">
                     <div class="slider">
-                        <input type="range" id="pen-size" min="5" max="15" step="1" onchange="sizeChange(this.value)">
+                        <input type="range" id="pen-size" min="2" max="15" step="1" onchange="sizeChange(this.value)">
 
                     </div>
                     <div class="pencil-colors">
@@ -55,7 +55,7 @@
                 <img src="./NewIcons/clear.svg" alt="" class="tool-img" id="eraser" onclick="handleTool('eraser')">
                 <div class="tool-options eraser" id="eraser-options">
                     <div class="eraser-size">
-                        <input type="range" id="eraser-size" min="5" max=30 onchange="sizeChange(this.value)">
+                        <input type="range" id="eraser-size" min="5" max=50 onchange="sizeChange(this.value)">
                     </div>
                 </div>
             </div>
@@ -66,6 +66,12 @@
 
             <div class="tool">
                 <img src="./NewIcons/upload.svg" alt="" class="tool-img" id="upload" onclick="handleTool('upload')">
+                <input type="file" name="" id="acceptImg" style="display: none;">
+
+            </div>
+
+            <div class="tool">
+                <img src="./NewIcons/broom.svg" alt="" class="tool-img" id="delete" onclick="handleTool('delete')">
                 <input type="file" name="" id="acceptImg" style="display: none;">
 
             </div>
@@ -93,11 +99,14 @@
             board.width = window.innerWidth;
             // redraw=> redraw
         })
+    
     </script>
+    <script src="utility.js"></script>
     <script src="tools.js"></script>
     <script src="sticky.js"></script>
-    <script src="canvas.js"></script>
     <script src="img.js"></script>
+    <script src="canvas.js"></script>
+    
 
 
 </body>

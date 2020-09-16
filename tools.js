@@ -8,6 +8,9 @@ ctx.imageSmoothingQuality = "high";
 let pencil = document.querySelector("#pencil");
 let eraser = document.querySelector("#eraser");
 let sticky = document.querySelector("#sticky");
+
+
+let stickyPad = document.querySelector(".stickyPad");
 let pencilOptions = document.querySelector("#pencil-options");
 let eraserOptions = document.querySelector("#eraser-options");
 let toggleP = false;
@@ -57,6 +60,9 @@ function handleTool(tool) {
         createSticky();
     } else if (tool == "upload") {
         uploadFile();
+    }else if (tool == "delete"){
+        ctx.clearRect(0,0,board.width, board.height);
+        stickyPad.remove();
     }
 
 
