@@ -56,8 +56,10 @@ function handleTool(tool) {
         }
     } else if (tool == "sticky") {
         createSticky();
+    
     } else if (tool == "upload") {
         uploadFile();
+    
     }else if (tool == "delete"){
         let stickyPad = document.querySelectorAll(".stickyPad");
         stickyPad.forEach(function(sticky){
@@ -74,7 +76,11 @@ function handleTool(tool) {
         undoLast();
     } else if (tool == "redo") {
         redoLast();
+    
+    } else if (tool == "download") {
+        downloadBoard();
     }
+
 
 
 
@@ -110,3 +116,6 @@ function handleHamburger() {
 
     isActive = !isActive;
 }
+
+// let newArr = [...oldArr]; => values are copied
+// let newArr = oldArr;=> address copy

@@ -24,7 +24,7 @@ board.addEventListener("mousedown", function (e) {
     }
     undoArr.push(mdp);
     //  point => realtime draw
-    socket.emit("md", mdp);
+    // socket.emit("md", mdp);
 })
 // on move
 board.addEventListener("mousemove", function (e) {
@@ -47,7 +47,7 @@ board.addEventListener("mousemove", function (e) {
             width: ctx.lineWidth
         }
         undoArr.push(mmp);
-        socket.emit("mm", mmp);
+        // socket.emit("mm", mmp);
     }
 })
 window.addEventListener("mouseup", function () {
@@ -64,10 +64,9 @@ function undoLast() {
     //  pop the last point
     if (undoArr.length >= 2) {
         //  lines 
-        console.log(undoArr);
         let tempArr = []
         for (let i = undoArr.length - 1; i >= 0; i--) {
-            console.log(undoArr[i]);
+            
             let id = undoArr[i].id;
             if (id == "md") {
                 tempArr.unshift(undoArr.pop());
