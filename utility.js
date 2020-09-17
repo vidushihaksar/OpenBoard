@@ -21,6 +21,7 @@ function createBox() {
     // close=> remove 
     close.addEventListener("click", function () {
         stickyPad.remove();
+        
     })
     let isOpen = true
     // minimize=> 
@@ -47,7 +48,7 @@ function createBox() {
             let finalY = e.clientY;
             let dX = finalX - initialX;
             let dY = finalY - initialY;
-            //  
+             console.log("mouse move")
             let { top, left } = stickyPad.getBoundingClientRect();
             stickyPad.style.top = top + dY + "px";
             stickyPad.style.left = left + dX + "px";
@@ -64,5 +65,7 @@ function createBox() {
         isStickyDown = false
     })
     stickyPad.style.display = "block";
+
+    
     return textbox;
 }

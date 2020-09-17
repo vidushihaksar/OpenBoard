@@ -65,13 +65,23 @@
             </div>
 
             <div class="tool">
-                <img src="./NewIcons/upload.svg" alt="" class="tool-img" id="upload" onclick="handleTool('upload')">
+                <img src="./NewIcons/photo.svg" alt="" class="tool-img" id="upload" onclick="handleTool('upload')">
+                <input type="file" name="" id="acceptImg" style="display: none;">
+
+            </div>
+            <div class="tool">
+                <img src="./NewIcons/undo.svg" alt="" class="tool-img" id="undo" onclick="handleTool('undo')">
+                <input type="file" name="" id="acceptImg" style="display: none;">
+
+            </div>
+            <div class="tool">
+                <img src="./NewIcons/redo.svg" alt="" class="tool-img" id="redo" onclick="handleTool('redo')">
                 <input type="file" name="" id="acceptImg" style="display: none;">
 
             </div>
 
             <div class="tool">
-                <img src="./NewIcons/broom.svg" alt="" class="tool-img" id="delete" onclick="handleTool('delete')">
+                <img src="./NewIcons/recycling-bin.svg" alt="" class="tool-img" id="delete" onclick="handleTool('delete')">
                 <input type="file" name="" id="acceptImg" style="display: none;">
 
             </div>
@@ -102,10 +112,10 @@
     
     </script>
     <script src="utility.js"></script>
+    <script src="canvas.js"></script>
     <script src="tools.js"></script>
     <script src="sticky.js"></script>
     <script src="img.js"></script>
-    <script src="canvas.js"></script>
     
 
 

@@ -9,8 +9,6 @@ let pencil = document.querySelector("#pencil");
 let eraser = document.querySelector("#eraser");
 let sticky = document.querySelector("#sticky");
 
-
-let stickyPad = document.querySelector(".stickyPad");
 let pencilOptions = document.querySelector("#pencil-options");
 let eraserOptions = document.querySelector("#eraser-options");
 let toggleP = false;
@@ -61,8 +59,21 @@ function handleTool(tool) {
     } else if (tool == "upload") {
         uploadFile();
     }else if (tool == "delete"){
+        let stickyPad = document.querySelectorAll(".stickyPad");
+        stickyPad.forEach(function(sticky){
+
+            sticky.remove();
+        })
         ctx.clearRect(0,0,board.width, board.height);
-        stickyPad.remove();
+        pencilOptions.classList.remove("show");
+        eraserOptions.classList.remove("show");
+        undoArr.length =0;
+        redoArr.length = 0;
+        
+    }else if (tool == "undo") {
+        undoLast();
+    } else if (tool == "redo") {
+        redoLast();
     }
 
 
