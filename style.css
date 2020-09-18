@@ -57,7 +57,7 @@ body {
 }
 
 .tool-options.eraser {
-    left: -3rem;
+    
     height: 3rem;
     top: 7.75rem;
     left: 20rem;
@@ -157,7 +157,7 @@ input[type=range]::-webkit-slider-thumb {
     justify-content: flex-end;
     align-items: center;
     padding-right: 11px;
-    background-color: lightcoral;
+    background-color: rgba(212, 126, 154, 0.979);
 }
 
 .close,
@@ -169,7 +169,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .close {
-    background: rgb(179, 5, 5);
+    background: rgb(202, 3, 3) ;
 }
 
 .minimize {
